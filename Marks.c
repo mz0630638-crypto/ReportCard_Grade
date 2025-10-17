@@ -18,21 +18,13 @@ int main() {
     }
     marks = 0;
 
-    if(Subject == 1) {
-        printf("\nYou selected English Subject: ");
-        }
-    if(Subject == 2) {
-        printf("\nYou selected Maths Subject: ");
-        }
-    if(Subject == 3) {
-        printf("\nYou selected Physics Subject: ");
-        }
-    if(Subject == 4) {
-        printf("\nYou selected Drawing Subject: ");
-        }
-    if(Subject == 5) {
-        printf("\nYou selected Computers Subject: ");
-        }
+    switch (Subject) {
+        case 1: printf("\nYou selected English Subject.\n"); break;
+        case 2: printf("\nYou selected Maths Subject.\n"); break;
+        case 3: printf("\nYou selected Physics Subject.\n"); break;
+        case 4: printf("\nYou selected Drawing Subject.\n"); break;
+        case 5: printf("\nYou selected Computers Subject.\n"); break;
+    }
 
     while(marks < 1 || marks > 100) {
         printf("\nEnter Your marks: ");
@@ -109,7 +101,6 @@ int main() {
                     printf("Grade E");
                 break;
                 }
-                break;
     }
     return 0;
 }
