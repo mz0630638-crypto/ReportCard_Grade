@@ -9,18 +9,15 @@ int main() {
     int Subject, marks;
 
     Subject = 0;
-
     while(Subject < 1 || Subject > 5) {
         printf("\nEnter Which Subject Grade you want to check: ");
-    scanf("%d", &Subject);
+        scanf("%d", &Subject);
     if(Subject < 1 || Subject > 5) {
         printf("Invalid choice. Try again\n");
         }
     }
+    marks = 0;
 
-    while(marks < 1 || marks > 100) {
-        
-    }
     if(Subject == 1) {
         printf("\nYou selected English Subject: ");
         }
@@ -36,9 +33,15 @@ int main() {
     if(Subject == 5) {
         printf("\nYou selected Computers Subject: ");
         }
-    printf("\nEnter Your marks: ");
-    scanf("%d", &marks);
 
+    while(marks < 1 || marks > 100) {
+        printf("\nEnter Your marks: ");
+        scanf("%d", &marks);
+    if(marks < 1 || marks > 100) {
+        printf("The Entered Marks are Not Valid.\n");
+        printf("\nPlese Enter Marks Between (1 - 100):");
+        }
+    }
     switch(Subject) {
         case 1: 
                 if(marks <= 100 && marks >= 90) {
@@ -52,10 +55,7 @@ int main() {
                 }else if(marks <= 45 && marks >= 25) {
                     printf("Grade E");
                 }
-                if(marks > 100) {
-                printf("The Entered Marks are Not Valid.\n");
-                printf("Plese Enter Marks Between (1 - 100) :");
-                }
+
                 break;
         case 2: 
                 if(marks <= 100 && marks >= 90) {
@@ -68,9 +68,6 @@ int main() {
                     printf("Grade D");
                 }else if(marks <= 45 && marks >= 25) {
                     printf("Grade E");
-                }if(marks > 100) {
-                printf("The Entered Marks are Not Valid.\n");
-                printf("Plese Enter Marks Between (1 - 100) :");
                 }
                 break;
         case 3: 
@@ -84,9 +81,6 @@ int main() {
                     printf("Grade D");
                 }else if(marks <= 45 && marks >= 25) {
                     printf("Grade E");
-                }if(marks > 100) {
-                printf("The Entered Marks are Not Valid.\n");
-                printf("Plese Enter Marks Between (1 - 100) :");
                 }
                 break;
         case 4: 
@@ -100,9 +94,6 @@ int main() {
                     printf("Grade D");
                 }else if(marks <= 45 && marks >= 25) {
                     printf("Grade E");
-                }if(marks > 100) {
-                printf("The Entered Marks are Not Valid.\n");
-                printf("Plese Enter Marks Between (1 - 100) :");
                 }
                 break;
         case 5: 
@@ -117,9 +108,6 @@ int main() {
                 }else if(marks <= 45 && marks >= 25) {
                     printf("Grade E");
                 break;
-                }if(marks > 100) {
-                printf("The Entered Marks are Not Valid.\n");
-                printf("Plese Enter Marks Between (1 - 100) :");
                 }
                 break;
     }
